@@ -1,12 +1,12 @@
 import { useState } from "react";
 import "../Form.css"
-function Form({cardData, setCardData, setDownload}) {
-    
-    function handleImgChange(e){
+function Form({ cardData, setCardData, setDownload }) {
+
+    function handleImgChange(e) {
         const file = e.target.files[0]
         setCardData(prev => ({
             ...prev,
-            imgUrl : file
+            imgUrl: file
         }))
     }
 
@@ -17,7 +17,7 @@ function Form({cardData, setCardData, setDownload}) {
         }))
     }
 
-    function handleSubmit(e){
+    function handleSubmit(e) {
         e.preventDefault();
         setDownload(d => !d)
     }
@@ -30,7 +30,7 @@ function Form({cardData, setCardData, setDownload}) {
                 <div className="type">
                     <label htmlFor="cardType">Select Card Type</label>
                     <select name="cardType" id="" onChange={(e) => onCardTypeChange(e.target.value)}>
-                        <option value="Basic">  
+                        <option value="Basic">
                             Basic
                         </option>
                         <option value="Business">
@@ -98,7 +98,7 @@ function Form({cardData, setCardData, setDownload}) {
                 </div>
 
                 <button onClick={handleSubmit}>Submit</button>
-                
+
             </form>
         </div>
     )

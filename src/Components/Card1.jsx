@@ -4,25 +4,25 @@ import { FaXTwitter, FaInstagram } from "react-icons/fa6";
 
 
 
-function Card1({cardData}) {
+function Card1({ cardData }) {
     return (
         <div className="container">
             <div className="card">
                 <div id='avatar'>
                     {cardData.imgUrl instanceof File ? (
-        <img
-        id='avatarImg'
-          src={URL.createObjectURL(cardData.imgUrl)}
-          alt="uploaded"
-        />
-      ) : (
-        <img
-        
-        id='avatarImg'
-        src="./avatar1.png"
-          alt="default"
-        />
-      )}
+                        <img
+                            id='avatarImg'
+                            src={URL.createObjectURL(cardData.imgUrl)}
+                            alt="uploaded"
+                        />
+                    ) : (
+                        <img
+
+                            id='avatarImg'
+                            src="./avatar1.png"
+                            alt="default"
+                        />
+                    )}
                 </div>
                 <div className='info'>
                     <span id='role'>{cardData.role}</span>

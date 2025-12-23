@@ -9,34 +9,34 @@ import html2canvas from "html2canvas";
 function App() {
   const cardRef = useRef(null)
   const [cardData, setCardData] = useState({
-        cardType: "Basic",
-        name: "",
-        role: "",
-        email: "",
-        link: "",
-        socialLinks: {
-            x: "",
-            insta: ""
-        },
-        imgUrl : null
+    cardType: "Basic",
+    name: "",
+    role: "",
+    email: "",
+    link: "",
+    socialLinks: {
+      x: "",
+      insta: ""
+    },
+    imgUrl: null
+  })
+  const [download, setDownload] = useState(false)
+
+  async function handleDownload() {
+    if (!cardRef.current) return;
+
+    const canvas = await html2canvas(cardRef.current, {
+      scale: 2,
+      useCORS: true
     })
-    const [download , setDownload] = useState(false)
 
-    async function handleDownload(){
-      if(!cardRef.current) return;
+    const img = canvas.toDataURL("image/png")
 
-      const canvas = await html2canvas(cardRef.current,{
-        scale :2,
-        useCORS: true
-      })
-
-      const img = canvas.toDataURL("image/png")
-
-       const link = document.createElement("a");
+    const link = document.createElement("a");
     link.href = img;
-    link.download =`${cardData.name}-card.png`;
+    link.download = `${cardData.name}-card.png`;
     link.click();
-    }
+  }
 
   return (
     <>
@@ -44,16 +44,16 @@ function App() {
       {/* <Card /> */}
       <div className='main-container'>
         <Form cardData={cardData} setCardData={setCardData} setDownload={setDownload} />
-      {
-        download ? 
-                  (cardData.cardType === "Basic" 
-                      ? <div ref={cardRef}> <Card1 cardData={cardData}/> </div> 
-                      : <div ref={cardRef}> <Card2 cardData={cardData}/> </div> )
-                 : null
-      }
-      {
-        download ? <button onClick={handleDownload}>Download</button> : null
-      }
+        {
+          download ?
+            (cardData.cardType === "Basic"
+              ? <div ref={cardRef}> <Card1 cardData={cardData} /> </div>
+              : <div ref={cardRef}> <Card2 cardData={cardData} /> </div>)
+            : null
+        }
+        {
+          download ? <button onClick={handleDownload}>Download</button> : null
+        }
       </div>
     </>
   )

@@ -14,8 +14,8 @@ import {
 
 import '../Card.css'
 
-function Card2({cardData}) {
-    
+function Card2({ cardData }) {
+
     return (
         <div className="container-2">
             <div className='head'>
@@ -52,26 +52,26 @@ function Card2({cardData}) {
                 <div className='row'>
                     <span className="line">2</span>
                     <span className="key">"name"</span>
-          <span className="colon">:</span>
-          <span className="value"> "{cardData.name}"</span>
+                    <span className="colon">:</span>
+                    <span className="value"> "{cardData.name}"</span>
                 </div>
                 <div className='row'>
                     <span className="line">3</span>
                     <span className="key">"role"</span>
-          <span className="colon">:</span>
-          <span className="value">"{cardData.role}"</span>
+                    <span className="colon">:</span>
+                    <span className="value">"{cardData.role}"</span>
                 </div>
                 <div className='row'>
                     <span className="line">4</span>
                     <span className="key">"email"</span>
-          <span className="colon">:</span>
-          <span className="value"> "{cardData.email}"</span>
+                    <span className="colon">:</span>
+                    <span className="value"> "{cardData.email}"</span>
                 </div>
                 <div className='row'>
                     <span className="line">5</span>
                     <span className="key">"link"</span>
-          <span className="colon">:</span>
-          <span className="value"> "{cardData.link}"</span>
+                    <span className="colon">:</span>
+                    <span className="value"> "{cardData.link}"</span>
                 </div>
                 <div className='row'>
                     <span className="line">6</span>
