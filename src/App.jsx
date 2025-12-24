@@ -40,26 +40,25 @@ function App() {
 
   return (
     <>
-      
-      {/* <Card /> */}
+
       <div className='main-container'>
         <Form cardData={cardData} setCardData={setCardData} setDownload={setDownload} />
         {
-  download && (
-    <div className="card-wrapper">
-      <div ref={cardRef}>
-        {cardData.cardType === "Basic"
-          ? <Card1 cardData={cardData} />
-          : <Card2 cardData={cardData} />
-        }
-      </div>
+          download && (
+            <div className="card-wrapper">
+              <div ref={cardRef}>
+                {cardData.cardType === "Basic"
+                  ? <Card1 cardData={cardData} />
+                  : <Card2 cardData={cardData} />
+                }
+              </div>
 
-      <button className="download-btn" onClick={handleDownload}>
-        Download
-      </button>
-    </div>
-  )
-}
+              <button className="download-btn" onClick={handleDownload}>
+                Download
+              </button>
+            </div>
+          )
+        }
 
       </div>
     </>
