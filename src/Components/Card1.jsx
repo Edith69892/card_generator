@@ -40,13 +40,13 @@ function Card1({ cardData }) {
                     <div className="socialLinks">
                         <div>
                             <FaXTwitter />
-                            <span>{cardData.socialLinks.x}
+                            <span>{cardData.x}
                             </span>
                         </div>
 
                         <div>
                             <FaInstagram />
-                            <span>{cardData.socialLinks.insta}</span>
+                            <span>{cardData.insta}</span>
                         </div>
                     </div>
 
