@@ -91,6 +91,9 @@ h2 {
   background-color: #333;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .head {
@@ -133,10 +136,12 @@ h2 {
 }
 
 .code-section {
-  height: 63%;
+
   display: flex;
+  flex: 1;
   flex-direction: column;
   background: #0b0f14;
+  border-bottom: #0b0f14 ;
   padding: 10px 14px;
   font-family: "Fira Code", monospace;
   font-size: 14px;

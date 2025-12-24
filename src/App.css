@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px; /* space between card and button */
+  gap: 16px;
 }
 
 .main-container {
@@ -18,8 +18,8 @@ body {
   justify-content: space-evenly;
 }
 
-@media (max-width: 600px){
-  .main-container{
+@media (max-width: 600px) {
+  .main-container {
     flex-direction: column;
     gap: 20px;
   }

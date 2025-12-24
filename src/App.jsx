@@ -27,7 +27,8 @@ function App() {
 
     const canvas = await html2canvas(cardRef.current, {
       scale: 2,
-      useCORS: true
+      useCORS: true,
+      backgroundColor: null
     })
 
     const img = canvas.toDataURL("image/png")
@@ -46,7 +47,10 @@ function App() {
         {
           download && (
             <div className="card-wrapper">
-              <div ref={cardRef}>
+              <div ref={cardRef} style={{
+                display: "inline-block",
+                background: "transparent"
+              }}>
                 {cardData.cardType === "Basic"
                   ? <Card1 cardData={cardData} />
                   : <Card2 cardData={cardData} />
