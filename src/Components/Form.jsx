@@ -24,7 +24,7 @@ function Form({ cardData, setCardData, setDownload }) {
 
     return (
         <div className="form-container">
-            <form onSubmit={handleSubmit}>
+            <form>
 
                 <h1>Make Your Card</h1>
                 <div className="type">
@@ -67,7 +67,7 @@ function Form({ cardData, setCardData, setDownload }) {
                     {
                         cardData.cardType === "Basic" ?
                             <>
-                                <input type="text" value={cardData.socialLinks.x}
+                                <input type="text" value={cardData.x}
                                     onChange={(e) => {
                                         setCardData(prev => ({
                                             ...prev,
@@ -75,7 +75,7 @@ function Form({ cardData, setCardData, setDownload }) {
                                         }))
                                     }}
                                     placeholder="Enter Your Twitter" />
-                                <input type="text" value={cardData.socialLinks.insta}
+                                <input type="text" value={cardData.insta}
                                     onChange={(e) => {
                                         setCardData(prev => ({
                                             ...prev,
@@ -97,7 +97,7 @@ function Form({ cardData, setCardData, setDownload }) {
                     <input type="file" accept="image/*" onChange={handleImgChange} />
                 </div>
 
-                <button id="submitBtn" type="submit">Submit</button>
+                <button onClick={handleSubmit}>Submit</button>
 
             </form>
         </div>

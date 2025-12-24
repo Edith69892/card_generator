@@ -79,10 +79,8 @@ h2 {
 
 .container-2 {
   width: 450px;
-  height: 300px;
-  color: #ffffff; /* pure white */
+  color: #ffffff; 
   background-color: #333;
-  /* border-radius: 20px; */
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   overflow: hidden;
 }
@@ -159,7 +157,32 @@ h2 {
 
 .value {
   color: #cb992d;
+
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
+
 .brace {
   color: #79c0ff;
+}
+
+@media (max-width: 600px) {
+  .container-2 {
+    width: 92vw;
+    max-width: 92vw;
+  }
+
+  .head h3 {
+    font-size: 1rem; 
+  }
+
+  .toolbar div {
+    gap: 10px;
+    font-size: 1rem;
+  }
+
+  .code-section {
+    font-size: 13px;
+  }
 }
