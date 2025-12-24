@@ -67,7 +67,7 @@ function Form({ cardData, setCardData, setDownload }) {
                     {
                         cardData.cardType === "Basic" ?
                             <>
-                                <input type="text" value={cardData.x}
+                                <input type="text" value={cardData.socialLinks.x}
                                     onChange={(e) => {
                                         setCardData(prev => ({
                                             ...prev,
@@ -86,7 +86,7 @@ function Form({ cardData, setCardData, setDownload }) {
                             </>
                             : null
                     }
-                    <input type="text" value={cardData.socialLinks.link}
+                    <input type="text" value={cardData.link}
                         onChange={(e) => {
                             setCardData(prev => ({
                                 ...prev,
