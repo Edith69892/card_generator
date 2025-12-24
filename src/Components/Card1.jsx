@@ -35,7 +35,13 @@ function Card1({ cardData }) {
                 <div className='info'>
                     <span id='role'>{cardData.role}</span>
                     <h2>{cardData.name}</h2>
-                    <div className='email-pill' ></div>
+                    <div className='email-pill'  style={{
+                        width: "150px",
+                        height: "22px",
+                        background: "#222",
+                        borderRadius: "12px",
+                        margin: "12px 0 6px 0"
+                    }}  ></div>
                     <span id='email'>{cardData.email}</span>
                     <div className="socialLinks">
                         <div>
