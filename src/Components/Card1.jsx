@@ -12,7 +12,7 @@ function Card1({ cardData }) {
         setImgSrc(url)
         return () => URL.revokeObjectURL(url)
     }
-},[])
+},[cardData.imgUrl])
     return (
         <div className="container">
             <div className="card">
