@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import reactLogo from '../assets/react.svg'
 import '../Card.css'
 import { FaXTwitter, FaInstagram } from "react-icons/fa6";
 

@@ -1,4 +1,4 @@
-import reactLogo from '../assets/react.svg'
+
 import '../Card.css'
 import { BsThreeDots } from "react-icons/bs";
 import {
@@ -12,7 +12,7 @@ import {
     VscEllipsis
 } from "react-icons/vsc";
 
-import '../Card.css'
+
 
 function Card2({ cardData }) {
 
